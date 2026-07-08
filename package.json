@@ -2,18 +2,30 @@
   "name": "cucumber-cypress-exemplo",
   "version": "1.0.0",
   "description": "Exemplo de modelo com cypress e cucumber",
-  "main": "index.js",
   "scripts": {
-    "test": "npx cypress run"
+    "cy:run": "cypress run && open cypress/reports/cucumber-report.html",
+    "cy:run:ci": "cypress run",
+    "cy:open": "cypress open",
+    "cy:run:tags": "cypress run --env tags="
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "cypress-cucumber-preprocessor": {
+    "html": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-report.html"
+    },
+    "json": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-report.json"
+    }
+  },
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^23.2.0",
-    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.6",
-    "cypress": "^14.5.4",
-    "esbuild": "^0.25.10"
+    "@badeball/cypress-cucumber-preprocessor": "^26.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "cypress": "^15.18.1",
+    "esbuild": "^0.28.1"
   }
 }

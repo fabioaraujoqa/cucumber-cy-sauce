@@ -4,8 +4,8 @@ Exemplo de automação de testes usando Cypress com Cucumber para estudantes da 
 
 ## 📋 Pré-requisitos
 
-- Node.js (versão 14 ou superior)
-- npm ou yarn
+- Node.js 20.12+ (exigido pelo `@badeball/cypress-cucumber-preprocessor`)
+- npm
 - Git
 
 ## 🚀 Como usar este projeto
@@ -24,21 +24,35 @@ npm install
 ### 3. Execute os testes
 ```bash
 # Executar testes em modo headless
-npx cypress run
+npm run cy:run
 
 # Executar testes com interface gráfica
-npx cypress open
-```
-# Excutar testes com tags
-```bash
-npx cypress run --env tags='@learn'
+npm run cy:open
+
+# Executar testes filtrando por tag
+npm run cy:run:tags @learn
 ```
 
 ## 🛠 Tecnologias utilizadas
 
-- **Cypress** - Framework de testes E2E
-- **Cucumber** - Ferramenta BDD para escrita de cenários
-- **JavaScript** - Linguagem de programação
+| Pacote | Versão |
+|---|---|
+| Cypress | 15 |
+| @badeball/cypress-cucumber-preprocessor | 26 |
+| @bahmutov/cypress-esbuild-preprocessor | 2 |
+| esbuild | 0.28 |
+
+## 📂 Estrutura do projeto
+
+```
+cypress/
+  e2e/                    # Arquivos .feature (Gherkin/BDD)
+  fixtures/               # Dados de teste fixos
+  support/
+    commands.js           # Comandos Cypress customizados
+    e2e.js                # Configuração global dos testes
+    step_definitions/     # Implementação dos steps Gherkin
+```
 
 ## 📚 Recursos de aprendizado
 
