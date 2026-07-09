@@ -15,7 +15,7 @@
   "cypress-cucumber-preprocessor": {
     "html": {
       "enabled": true,
-      "output": "cypress/reports/cucumber-report.html"
+      "output": "cypress/reports/index.html"
     },
     "json": {
       "enabled": true,
