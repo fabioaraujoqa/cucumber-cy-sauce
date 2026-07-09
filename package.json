@@ -4,9 +4,9 @@
   "description": "Exemplo de modelo com cypress e cucumber",
   "scripts": {
     "cy:run": "cypress run && open cypress/reports/cucumber-report.html",
-    "cy:run:ci": "cypress run",
+    "cy:run:ci": "cypress run --browser chrome",
     "cy:open": "cypress open",
-    "cy:run:tags": "cypress run --env tags="
+    "cy:tags": "cypress run --browser chrome --env tags="
   },
   "keywords": [],
   "author": "",
