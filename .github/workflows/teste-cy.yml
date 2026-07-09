@@ -28,3 +28,9 @@ jobs:
 
     - name: Executar os testes
       run: npm run cy:run:ci
+
+    - name: Publicar relatório
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./cypress/reports

@@ -54,6 +54,10 @@ cypress/
     step_definitions/     # Implementação dos steps Gherkin
 ```
 
+Publica relatório: 
+
+https://github.com/peaceiris/actions-gh-pages
+
 ## 📚 Recursos de aprendizado
 
 Este projeto foi criado para fins educacionais da EBAC (Escola Britânica de Artes Criativas e Tecnologia).
