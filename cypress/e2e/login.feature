@@ -10,7 +10,7 @@ Contexto:
 
 @criticidade-alta @smoke-test
 Cenário: Login com credenciais válidas
-    Quando preencher usuário "standard_user" e a senha "secret_sauce"
+    Quando preencher usuário "standard_user" e a senha "secret_saucexxxx"
     E clicar no botão "Login"
     Então deve ser redirecionado para a página inicial do painel
     E deve exibir os itens disponíveis no e-commerce
