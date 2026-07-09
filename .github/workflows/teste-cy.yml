@@ -24,12 +24,16 @@ jobs:
         cache: 'npm'
 
     - name: Instalar dependencias node     
-      run: npm install -y
+      run: npm install
 
     - name: Executar os testes
-      run: npm run cy:run:ci
+      uses: cypress-io/github-action@v6
+      with:
+        command: npm run cy:run:ci
+        install: false
 
     - name: Publicar relatório
+      if: always()
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
