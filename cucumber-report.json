@@ -1,0 +1,295 @@
+[
+  {
+    "description": "  Como um usuário cadastrado\n  Quero fazer login no sistema\n  Para acessar a minha área restrita",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-do-usuário;login-com-credenciais-válidas",
+        "keyword": "Cenário",
+        "line": 12,
+        "name": "Login com credenciais válidas",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que o usuário está na página de login",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 347000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 13,
+            "name": "preencher usuário \"standard_user\" e a senha \"secret_sauce\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 668000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 14,
+            "name": "clicar no botão \"Login\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 141000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 15,
+            "name": "deve ser redirecionado para a página inicial do painel",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 16,
+            "name": "deve exibir os itens disponíveis no e-commerce",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@criticidade-alta",
+            "line": 11
+          },
+          {
+            "name": "@smoke-test",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-do-usuário;login-com-credenciais-inválidas",
+        "keyword": "Cenário",
+        "line": 19,
+        "name": "Login com credenciais inválidas",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que o usuário está na página de login",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 20,
+            "name": "preencher usuário \"teste\" e a senha \"senha1234\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 418000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 21,
+            "name": "clicar no botão \"Login\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 88000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 22,
+            "name": "deve aparecer uma mensagem de erro \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@criticidade-media",
+            "line": 18
+          },
+          {
+            "name": "@full-test",
+            "line": 18
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-do-usuário",
+    "line": 3,
+    "keyword": "Funcionalidade",
+    "name": "Login do Usuário",
+    "tags": [],
+    "uri": "cypress/e2e/login.feature"
+  },
+  {
+    "description": "  Como um desenvolvedor interessado em BDD\n  Eu quero navegar pelo site oficial do Cucumber\n  Para que eu possa acessar a documentação e aprender sobre a ferramenta",
+    "elements": [
+      {
+        "description": "",
+        "id": "navegação-no-site-cucumber.io;visitar-a-página-inicial-do-cucumber.io",
+        "keyword": "Cenário",
+        "line": 12,
+        "name": "Visitar a página inicial do Cucumber.io",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que acesso o site do Cucumber.io",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 730000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 13,
+            "name": "clicar no link Documentation",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 138000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 14,
+            "name": "deve exibir o título Introduction na página",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 259000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@documentação",
+            "line": 11
+          },
+          {
+            "name": "@criticidade-alta",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "navegação-no-site-cucumber.io;acessar-a-seção-de-aprendizado",
+        "keyword": "Cenário",
+        "line": 17,
+        "name": "Acessar a seção de Aprendizado",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que acesso o site do Cucumber.io",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 297000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 18,
+            "name": "clicar no link Learn",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 133000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 19,
+            "name": "deve exibir o título Learn na página",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@learn",
+            "line": 16
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "navegação-no-site-cucumber.io",
+    "line": 3,
+    "keyword": "Funcionalidade",
+    "name": "Navegação no site Cucumber.io",
+    "tags": [],
+    "uri": "cypress/e2e/teste.feature"
+  }
+]
