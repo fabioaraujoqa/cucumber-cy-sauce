@@ -1,6 +1,6 @@
 # cucumber-cypress-exemplo
 
-Exemplo de automação de testes usando Cypress com Cucumber para estudantes da EBAC.
+Exemplo de automação de testes usando Cypress com Cucumber.
 
 ## 📋 Pré-requisitos
 
@@ -12,8 +12,8 @@ Exemplo de automação de testes usando Cypress com Cucumber para estudantes da 
 
 ### 1. Clone o repositório
 ```bash
-git clone https://github.com/EBAC-QE/cucumber-cypress-exemplo.git
-cd cucumber-cypress-exemplo
+git clone https://github.com/fabioaraujoqa/cucumber-cy-sauce.git
+cd cucumber-cy-sauce
 ```
 
 ### 2. Instale as dependências
@@ -32,6 +32,37 @@ npm run cy:open
 # Executar testes filtrando por tag
 npm run cy:run:tags @learn
 ```
+
+## ⚙️ CI/CD — Testes e publicação do report
+
+Este projeto possui um workflow do GitHub Actions (`.github/workflows/deploy-report.yml`) que roda automaticamente a cada push na branch `main` e faz o seguinte:
+
+1. **Instala as dependências** do projeto
+2. **Executa os testes** do Cypress no navegador Chrome
+3. **Gera o report HTML** do Cucumber (criado automaticamente pelo preprocessor em `cypress/reports/index.html`)
+4. **Publica o report no GitHub Pages**, ficando disponível publicamente
+
+O report atualizado pode ser acessado em:
+
+**https://fabioaraujoqa.github.io/cucumber-cy-sauce/**
+
+> O workflow também pode ser executado manualmente pela aba **Actions** do repositório (botão *Run workflow*).
+
+### Como configurar em um fork/repositório próprio
+
+1. Vá em **Settings → Pages** e, em **Source**, selecione **GitHub Actions**
+2. Certifique-se de que o workflow contém o bloco de permissões abaixo (sem ele o deploy falha com erro 403):
+
+```yaml
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+```
+
+3. Faça um push na branch `main` e acompanhe a execução na aba **Actions**
+
+Não é necessário criar tokens ou secrets — a autenticação é feita automaticamente pelo próprio GitHub Actions.
 
 ## 🛠 Tecnologias utilizadas
 
@@ -54,10 +85,6 @@ cypress/
     step_definitions/     # Implementação dos steps Gherkin
 ```
 
-Publica relatório: 
-
-https://github.com/peaceiris/actions-gh-pages
-
 ## 📚 Recursos de aprendizado
 
-Este projeto foi criado para fins educacionais da EBAC (Escola Britânica de Artes Criativas e Tecnologia).
+Este projeto foi criado como exemplo de automação de testes utilizando Cypress com Cucumber (BDD).
