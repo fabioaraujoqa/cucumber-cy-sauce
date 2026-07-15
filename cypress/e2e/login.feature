@@ -9,7 +9,7 @@ Contexto:
     Dado que o usuário está na página de login
 
 @criticidade-alta @smoke-test
-Cenário: Login com credenciais válidas
+Cenário: Login com credenciais válidas 
     Quando preencher usuário "standard_user" e a senha "secret_sauce"
     E clicar no botão "Login"
     Então deve ser redirecionado para a página inicial do painel
