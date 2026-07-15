@@ -3,7 +3,7 @@ name: Testes E2E + Publicar Report
 on:
   push:
     branches: [main]
-  workflow_dispatch:   # permite rodar manualmente pela aba Actions
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -27,20 +27,19 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Instalar dependências 
+      - name: Instalar dependências
         run: npm ci
 
       - name: Rodar Cypress
         uses: cypress-io/github-action@v6
-        continue-on-error: true   # gera o report mesmo se testes falharem
-
-      - name: Gerar report HTML
-        run: npm run report
+        with:
+          browser: chrome   # igual ao seu cy:run:ci
+        continue-on-error: true
 
       - name: Upload do artefato do Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: cypress/reports/   # a pasta onde está o index.html
+          path: cypress/reports/
 
   deploy:
     needs: test-and-build

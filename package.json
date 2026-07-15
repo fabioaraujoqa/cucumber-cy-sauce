@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Exemplo de modelo com cypress e cucumber",
   "scripts": {
-    "cy:run": "cypress run && open cypress/reports/cucumber-report.html",
+    "cy:run": "cypress run && open cypress/reports/index.html",
     "cy:run:ci": "cypress run --browser chrome",
     "cy:open": "cypress open",
     "cy:tags": "cypress run --browser chrome --env tags="
